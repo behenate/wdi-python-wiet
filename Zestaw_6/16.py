@@ -8,26 +8,18 @@ def can_build(s1, s2):
         if letter in vowels:
             s1_vowels += 1
         s1_ascii += ord(letter)
-    available_indexes = [i for i in range(len(s2))]
 
-    def build(a_i, combination="", c_vowels=0, c_ascii=0):
+    def build(index=0, combination="", c_vowels=0, c_ascii=0):
+        print(combination)
         if s1_ascii == c_ascii and s1_vowels == c_vowels:
             return True
-        if len(a_i) == 0 or c_vowels > s1_vowels or c_ascii > s1_ascii:
+        if index == len(s2) or c_vowels > s1_vowels or c_ascii > s1_ascii:
             return False
-
         to_ret = False
-        for elem in a_i:
-            a = [""]*(len(a_i)-1)
-            cnt = 0
-            for elem1 in a_i:
-                if elem1 != elem:
-                    a[cnt] = elem1
-                    cnt += 1
-            vowel = 1 if s2[elem] in vowels else 0
-            to_ret = to_ret or build(a, combination+s2[elem], c_vowels+vowel, c_ascii+ord(s2[elem]))
+        for i in range(index, len(s2)):
+            vowel = 1 if s2[i] in vowels else 0
+            to_ret = to_ret or build(i+1, combination+s2[i], c_vowels+vowel, c_ascii+ord(s2[i]))
         return to_ret
-    return build(available_indexes)
-
+    return build()
 
 print(can_build("ula", "exe"))
