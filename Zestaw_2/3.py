@@ -25,16 +25,7 @@
 >>1
 
 """
-num = 1234
 
-
-def len_num(num)
-    len = 0
-    while num > 1:
-        num /= 10
-        len += 1
-    # end while
-    return len
 """
 1234 
 /10 bez reszty * 10 to jest 1230
@@ -49,10 +40,8 @@ def reverse(num):
     reversed = 0
     while num > 0:
         reversed *= 10
-        bez_reszty = num//(10)*10
-        r = num % 10
-        reversed += r
-        num = bez_reszty//10
+        reversed += num % 10
+        num //=10
     return reversed
 
 
@@ -61,5 +50,5 @@ def palindrom(num):
         return True
     return False
 
-print(palindrom(11011))
+print(palindrom(771))
 
