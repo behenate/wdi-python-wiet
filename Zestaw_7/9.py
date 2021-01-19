@@ -4,10 +4,10 @@ class Elem:
         self.prev_e = prev_e
         self.next_e = next_e
 
-e1 = Elem(9)
-e2 = Elem(7, e1)
+e1 = Elem(3)
+e2 = Elem(8, e1)
 e1.next_e = e2
-e3 = Elem(9, e2)
+e3 = Elem(6, e2)
 e2.next_e=e3
 def add1(e1):
     e = e1
