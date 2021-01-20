@@ -4,3 +4,13 @@
     powstać nowa lista.
 """
 
+
+class Digit:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
+
+n1 = Digit(7, Digit(9, Digit(7)))
+n2 = Digit(1, Digit(6, Digit(5)))
+
