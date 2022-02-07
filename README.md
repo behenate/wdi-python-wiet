@@ -1,2 +1,2 @@
-### Solutions for the WDI "Wstęp Do Informatyki" course on AGH UST.
+### Solutions for the WDI "Introduction To Computer Science" course on AGH UST.
 
