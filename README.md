@@ -1,1 +1,2 @@
-"# WDI_Python_WIET" 
+### Solutions for the WDI "Wstęp Do Informatyki" course on AGH UST.
+
